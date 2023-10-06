@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mediaqueries.css" />
   </head>
   <body>
     <nav id="desktop-nav">
@@ -105,8 +105,7 @@
           </div>
           <div class="text-container">
             <p>
-                Hello! I'm Lewis Lawler, a 25-year-old graduate with a degree in Business Management with Marketing from Leeds Beckett University. While my academic journey initially focused on business and marketing, my career path took an exciting turn when I entered the world of cyber security insurance brokering. This unique experience not only sharpened my business acumen but also ignited a deep passion for cyber security and software development.
-                My curiosity led me to embark on a transformative journey at Northcoders, a full-stack software development bootcamp. I'm thrilled to say that I recently graduated from the program with a wealth of knowledge and skills in software development.</br></br>
+                Hi I'm Lewis, an aspiring software developer that had the pelasure of learning how to programme at Northcoders, a full-stack software development bootcamp. I'm thrilled to say that I recently graduated from the program with a wealth of knowledge and skills in software development.</br></br>
                 
                 Currently, I'm channeling my newfound expertise into real-world projects for friends and family. This hands-on experience not only allows me to contribute to meaningful projects but also serves as a platform for continuous improvement and skill enhancement.</br></br>
                 
@@ -383,6 +382,35 @@
         </div>
       </div>
     </section>
+    <div class="count-particles">
+        <span class="js-count-particles">--</span> particles
+      </div>
+
+      <div id="particles-js"></div>
+
+      <script src="js/particles.js"></script>
+      <script src="js/app.js"></script>
+
+<script>
+  var count_particles, stats, update;
+  stats = new Stats;
+  stats.setMode(0);
+  stats.domElement.style.position = 'absolute';
+  stats.domElement.style.left = '0px';
+  stats.domElement.style.top = '0px';
+  document.body.appendChild(stats.domElement);
+  count_particles = document.querySelector('.js-count-particles');
+  update = function() {
+    stats.begin();
+    stats.end();
+    if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+      count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+    }
+    requestAnimationFrame(update);
+  };
+  requestAnimationFrame(update);
+</script>
+
     <footer>
       <nav>
         <div class="nav-links-container">
@@ -396,6 +424,5 @@
       </nav>
       <p>Copyright &#169; 2023 Lewis Lawler. All Rights Reserved.</p>
     </footer>
-    <script src="script.js"></script>
   </body>
 </html>
