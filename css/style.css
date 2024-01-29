@@ -387,6 +387,13 @@ article .icon {
   border-color: rgb(163, 163, 163);
 }
 
+.swiper-container {
+  width: 100%;
+}
+
+
+
+
 /* CONTACT SECTION */
 
 #contact {
