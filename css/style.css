@@ -362,6 +362,8 @@ article .icon {
 
 /* PROJECTS SECTION */
 
+/* PROJECTS SECTION */
+
 #projects {
   position: relative;
 }
@@ -369,17 +371,21 @@ article .icon {
 .color-container {
   border-color: rgb(163, 163, 163);
   background: rgb(250, 250, 250);
+  padding: 2rem; /* Add padding to the color-container */
 }
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%; /* Set the width to 100% to make it responsive */
+  height: auto; /* Make the height auto to maintain aspect ratio */
+  max-width: 100%; /* Add max-width to prevent the image from exceeding its container */
+  max-height: 100%; /* Add max-height to prevent the image from exceeding its container */
 }
 
 .project-title {
   margin: 1rem;
   color: black;
+  text-align: center; /* Center the text within the container */
 }
 
 .project-btn {
@@ -390,6 +396,12 @@ article .icon {
 .swiper-container {
   width: 100%;
 }
+
+/* Adjust the height of the projects section as needed */
+#projects {
+  height: 100vh; /* You can adjust the height according to your design */
+}
+
 
 
 
